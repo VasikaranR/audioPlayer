@@ -2,8 +2,9 @@
         <span>Music</span>
     </mat-toolbar>
 </p>
+ <app-liked-songs [liked]="liked"></app-liked-songs>
 <div class="search-container">
-    <app-search-bar (searchQuery)="searchSong($event)"> </app-search-bar>
+    <app-search-bar (searchQuery)="searchSong($event)"></app-search-bar>
 </div>
 <div class="card-container">
     <app-musiclist [music]="music"></app-musiclist>

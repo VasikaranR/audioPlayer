@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'audioPlayer';
 
   music:any
+  liked:any
   constructor(private musicListService: AudioService) { }
 
   ngOnInit(): void {}
@@ -18,5 +19,8 @@ export class AppComponent {
     this.musicListService.getMusicList(value).subscribe(music=> {
       this.music = music;
     })
+
   }
+
+
 }

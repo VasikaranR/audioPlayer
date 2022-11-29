@@ -1,6 +1,6 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,16 +12,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MusiclistComponent } from './musiclist/musiclist.component';
+import { LikedSongsComponent } from './liked-songs/liked-songs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     MusiclistComponent,
+    LikedSongsComponent,
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatFormFieldModule,
     MatToolbarModule,

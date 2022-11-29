@@ -18,6 +18,7 @@ export class SearchBarComponent implements OnInit {
 
   passQueryString(value:any) {
     this.searchQuery.emit(value);
+    console.log("ithaan",value)
     this.musicListService.clearCache();
   }
 

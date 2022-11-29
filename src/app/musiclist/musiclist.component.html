@@ -1,7 +1,8 @@
 <mat-card *ngFor="let music of music?.results; let index = index">
+    {{music}}
     <mat-card-header>
         <div class="icon-actions">
-            <mat-icon>favorite</mat-icon>
+            <mat-icon (click)="addtoFavlist()">favorite</mat-icon>
             <mat-icon>share</mat-icon>
             <mat-icon>turned_in</mat-icon>
             <mat-icon>highlight_off</mat-icon>
@@ -19,7 +20,8 @@
             <p>Album: {{ music.collectionName }} </p>
             <p>Country: {{ music.country }} </p>
             <p>Track No: {{ music.trackNumber }} </p>
-            <p>Genra: {{ music.primaryGenreName }} </p>
+            <p>Genre: {{ music.primaryGenreName }} </p>
+            <p>musicVideo:{{music.media}}</p>
         </div>
     </mat-card-content>
     <mat-card-actions>

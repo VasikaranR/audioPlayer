@@ -8,11 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MusiclistComponent implements OnInit {
 
   @Input() music:any;
+
   player = new Audio;
   
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+  }
 
   playSong(audio:any) {
     this.player.src = audio.previewUrl;
@@ -21,5 +24,9 @@ export class MusiclistComponent implements OnInit {
   stopSong(audio:any) {
     this.player.pause();
   }
-
+  
+  addtoFavlist(){
+    this.music.previewUrl
+  console.log(this.music.results.previewUrl)
+  }
 }

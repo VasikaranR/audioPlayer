@@ -25,6 +25,13 @@ export class AudioService {
 
   clearCache() {
     this.musicList;
+    this.musicList!.subscribe({
+      next:(result:any)=>{
+        console.log(result)
+      }
+
+
+    })
   }
 
 
